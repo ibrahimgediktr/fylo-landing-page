@@ -1,0 +1,104 @@
+.productive {
+    padding: 100px 0px -30px;
+    @media screen and (max-width:768px){
+        padding: 40px 0 -30px;
+    }
+    &-container {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 1280px) {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        @media screen and (max-width:992px){
+            flex-direction: column;
+        }
+        .productive-image {
+            width: 50%;
+            @media screen and(max-width:992px){
+                width: 80%;
+                max-width: 500px;
+            }
+        }
+        .productive-text {
+            width: 50%;
+            margin: 0 45px;
+            @media screen and (max-width:992px){
+                margin:0;
+                width: 100%;
+            }
+            &-heading {
+                font-size: 32px;
+                color: $white;
+                padding-right: 40%;
+                @media screen and (max-width:992px){
+                    padding-right: 0;
+                    text-align: center;
+                    margin-top:40px;
+                }
+                @media screen and (max-width: 576px) {
+                    font-size: 22px;
+                }
+            }
+            &-description {
+                color: $white;
+                filter: brightness(0.85);
+                margin-top: 25px;
+                line-height: 1.6;
+                @media screen and (max-width:992px){
+                    text-align: center;
+                }
+            }
+            &-link {
+                margin-top: 25px;
+                color: $cyan;
+                display: flex;
+                @media screen and (max-width:992px) {
+                    justify-content: center;
+                }
+                p{
+                    position: relative;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 115%;
+                        height: 2px;
+                        background: $cyan;
+                        bottom: -4px;
+                        left: 0;
+                    }
+                }
+                span {
+                    margin-top: 3px;
+                    margin-left: 8px;
+                }
+                &.hover{
+                    color: $white;
+                    transition: all 0.1s ease-in-out;
+                    p{
+                        &::after{
+                            background: $white;
+                            transition: all 0.1s ease-in-out;
+                        }
+                    }
+                    span{
+                        svg{
+                            g{
+                                g{
+                                    use{
+                                        fill: $white;
+                                        transition: all 0.1s ease-in-out;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

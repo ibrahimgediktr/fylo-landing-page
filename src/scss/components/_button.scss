@@ -1,0 +1,31 @@
+.btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-family:$raleway;
+    border-radius: 500px;
+    font-weight: 700;
+}
+
+@mixin btn-medium{
+    width:158px;
+    height: 40px;
+}
+
+@mixin btn-large{
+    max-width: 280px;
+    height: 55px;
+    width: 100%;
+}
+
+@mixin btn-primary {
+    background: linear-gradient(20deg, $cyan -60%, $blue 80%);
+    color: $white;
+    &:hover{
+        filter: brightness(1.1);
+        color: $white;
+    }
+}
